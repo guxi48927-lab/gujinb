@@ -11,9 +11,27 @@ echo -e "\033[0m"
 echo -e "\033[36m=============== GUJINB666 专用卡密系统 v1.11 ===============\033[0m"
 echo ""
 
-echo -e "\033[35m请输入启动卡密：\033[0m"
+echo -e "\033[35m请输入卡密：\033[0m"
 read -s INPUT_KEY
-key="GJMMNB666WSXGWWW"
+
+c1="G"
+c2="J"
+c3="M"
+c4="M"
+c5="N"
+c6="B"
+c7="6"
+c8="6"
+c9="6"
+c10="W"
+c11="S"
+c12="X"
+c13="G"
+c14="W"
+c15="W"
+c16="W"
+key="$c1$c2$c3$c4$c5$c6$c7$c8$c9$c10$c11$c12$c13$c14$c15$c16"
+
 if [ "$INPUT_KEY" != "$key" ]; then
     echo -e "\033[31m❌ 卡密错误！退出程序\033[0m"
     exit 1
@@ -25,17 +43,14 @@ clear
 
 cd "$(dirname "$0")" || exit 1
 
-# ====================== 版本配置（无缓存终极版） ======================
+# ====================== 版本配置 ======================
 LOCAL_VER="v1.11"
-
-# 直接走 GitHub 原始链接，彻底抛弃 ghproxy 缓存！
 VER_URL="https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/version.txt"
 UPDATE_URL="https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/版本/替换终端.sh"
-
 MY_PID=$$
 OLD_FILE="$0"
 NEW_FILE="替换${LOCAL_VER}终端.sh"
-# ====================================================================
+# ======================================================
 
 SRC="./config.json"
 DST_DIR="/storage/emulated/0/Android/data/com.pi.czrxdfirst/files"
@@ -46,9 +61,9 @@ BAK_FILE="$BAK_DIR/config.json"
 URL_V1="https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/v1/config.json"
 URL_V2="https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/v2/config.json"
 
-# ====================== 强制无缓存检测更新 ======================
+# ====================== 检测更新 ======================
 echo -e "\033[36m📌 当前版本：$LOCAL_VER\033[0m"
-echo -e "\033[33m🔍 正在检测更新（强制无缓存）...\033[0m"
+echo -e "\033[33m🔍 正在检测更新...\033[0m"
 
 ONLINE_VER=""
 if command -v curl >/dev/null 2>&1; then
@@ -67,7 +82,7 @@ if [ -n "$ONLINE_VER" ] && [ "$ONLINE_VER" != "$LOCAL_VER" ]; then
   read yn
 
   if [ -z "$yn" ] || [ "$yn" = "N" ] || [ "$yn" = "n" ]; then
-    echo -e "\033[31m已选择不更新，脚本自动退出\033[0m"
+    echo -e "\033[31m已选择不更新，自动退出\033[0m"
     sleep 2
     exit 1
   fi
@@ -95,7 +110,7 @@ else
   echo -e "\033[32m✅ 已是最新版本\033[0m"
   sleep 1
 fi
-# =================================================================
+# ======================================================
 
 while true; do
 clear
