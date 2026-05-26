@@ -1,7 +1,4 @@
 #!/bin/bash
-# 自动设置只读防编辑
-chmod 444 "$0"
-
 clear
 echo -e "\033[33m"
 echo " ██████╗ ██╗   ██╗███████╗██╗███╗   ██╗███████╗███████╗███████╗"
@@ -28,15 +25,17 @@ clear
 
 cd "$(dirname "$0")" || exit 1
 
-# ====================== 版本配置 ======================
+# ====================== 版本配置（无缓存终极版） ======================
 LOCAL_VER="v1.11"
-# 加时间戳强制绕过缓存，保证每次拿最新版本号
-VER_URL="https://ghproxy.net/https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/version.txt?t=$(date +%s)"
-UPDATE_URL="https://ghproxy.net/https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/版本/替换终端.sh"
+
+# 直接走 GitHub 原始链接，彻底抛弃 ghproxy 缓存！
+VER_URL="https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/version.txt"
+UPDATE_URL="https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/版本/替换终端.sh"
+
 MY_PID=$$
 OLD_FILE="$0"
 NEW_FILE="替换${LOCAL_VER}终端.sh"
-# ======================================================
+# ====================================================================
 
 SRC="./config.json"
 DST_DIR="/storage/emulated/0/Android/data/com.pi.czrxdfirst/files"
@@ -44,12 +43,12 @@ DST="$DST_DIR/config.json"
 BAK_DIR="/storage/emulated/0/备份"
 BAK_FILE="$BAK_DIR/config.json"
 
-URL_V1="https://ghproxy.net/https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/v1/config.json"
-URL_V2="https://ghproxy.net/https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/v2/config.json"
+URL_V1="https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/v1/config.json"
+URL_V2="https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/v2/config.json"
 
-# ====================== 检测更新 ======================
+# ====================== 强制无缓存检测更新 ======================
 echo -e "\033[36m📌 当前版本：$LOCAL_VER\033[0m"
-echo -e "\033[33m🔍 正在检测更新（强制最新）...\033[0m"
+echo -e "\033[33m🔍 正在检测更新（强制无缓存）...\033[0m"
 
 ONLINE_VER=""
 if command -v curl >/dev/null 2>&1; then
@@ -74,7 +73,6 @@ if [ -n "$ONLINE_VER" ] && [ "$ONLINE_VER" != "$LOCAL_VER" ]; then
   fi
 
   if [ "$yn" = "Y" ] || [ "$yn" = "y" ]; then
-    chmod 777 "$OLD_FILE"
     echo -e "\033[33m⏬ 正在下载最新终端..."
     if command -v curl >/dev/null 2>&1; then
       curl -L -o "$NEW_FILE" "$UPDATE_URL"
@@ -88,7 +86,7 @@ if [ -n "$ONLINE_VER" ] && [ "$ONLINE_VER" != "$LOCAL_VER" ]; then
       echo -e "\033[32m✅ 更新完成！新文件：$NEW_FILE\033[0m"
       echo -e "\033[33m请打开新文件使用！\033[0m"
     else
-      echo -e "\033[31m❌ 更新失败，保留旧文件\033[0m"
+      echo -e "\033[31m❌ 更新失败！\033[0m"
     fi
     sleep 3
     exit 0
@@ -97,7 +95,7 @@ else
   echo -e "\033[32m✅ 已是最新版本\033[0m"
   sleep 1
 fi
-# ======================================================
+# =================================================================
 
 while true; do
 clear
