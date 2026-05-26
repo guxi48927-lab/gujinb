@@ -1,4 +1,7 @@
 #!/bin/bash
+# 自动设为只读，禁止编辑
+chmod 444 "$0"
+
 clear
 echo -e "\033[33m"
 echo " ██████╗ ██╗   ██╗███████╗██╗███╗   ██╗███████╗███████╗███████╗"
@@ -14,6 +17,7 @@ echo ""
 echo -e "\033[35m请输入卡密：\033[0m"
 read -s INPUT_KEY
 
+# 拆分格式卡密：GJMMNB666WSXGWWW
 c1="G"
 c2="J"
 c3="M"
@@ -43,14 +47,15 @@ clear
 
 cd "$(dirname "$0")" || exit 1
 
-# ====================== 版本配置 ======================
+# 版本配置 + 动态时间戳 彻底绕过缓存
 LOCAL_VER="v1.11"
-VER_URL="https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/version.txt"
+TIMESTAMP=$(date +%s)
+VER_URL="https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/version.txt?_t=${TIMESTAMP}"
 UPDATE_URL="https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/版本/替换终端.sh"
+
 MY_PID=$$
 OLD_FILE="$0"
 NEW_FILE="替换${LOCAL_VER}终端.sh"
-# ======================================================
 
 SRC="./config.json"
 DST_DIR="/storage/emulated/0/Android/data/com.pi.czrxdfirst/files"
@@ -61,16 +66,19 @@ BAK_FILE="$BAK_DIR/config.json"
 URL_V1="https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/v1/config.json"
 URL_V2="https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/v2/config.json"
 
-# ====================== 检测更新 ======================
-echo -e "\033[36m📌 当前版本：$LOCAL_VER\033[0m"
-echo -e "\033[33m🔍 正在检测更新...\033[0m"
+# 版本检测（打印获取到的云端版本，方便排查）
+echo -e "\033[36m本地版本：$LOCAL_VER\033[0m"
+echo -e "\033[33m正在拉取云端版本...\033[0m"
 
 ONLINE_VER=""
 if command -v curl >/dev/null 2>&1; then
-  ONLINE_VER=$(curl -s --connect-timeout 3 "$VER_URL" 2>/dev/null | tr -d '\r\n' || echo "")
+  ONLINE_VER=$(curl -s --connect-timeout 3 "$VER_URL" 2>/dev/null | tr -d '\r\n')
 elif command -v wget >/dev/null 2>&1; then
-  ONLINE_VER=$(wget -q --timeout=3 -O - "$VER_URL" 2>/dev/null | tr -d '\r\n' || echo "")
+  ONLINE_VER=$(wget -q --timeout=3 -O - "$VER_URL" 2>/dev/null | tr -d '\r\n')
 fi
+
+echo -e "\033[36m云端版本：${ONLINE_VER:-获取失败}\033[0m"
+sleep 1
 
 if [ -n "$ONLINE_VER" ] && [ "$ONLINE_VER" != "$LOCAL_VER" ]; then
   clear
@@ -88,7 +96,8 @@ if [ -n "$ONLINE_VER" ] && [ "$ONLINE_VER" != "$LOCAL_VER" ]; then
   fi
 
   if [ "$yn" = "Y" ] || [ "$yn" = "y" ]; then
-    echo -e "\033[33m⏬ 正在下载最新终端..."
+    chmod 777 "$OLD_FILE"
+    echo -e "\033[33m⏬ 正在下载最新终端...\033[0m"
     if command -v curl >/dev/null 2>&1; then
       curl -L -o "$NEW_FILE" "$UPDATE_URL"
     elif command -v wget >/dev/null 2>&1; then
@@ -110,7 +119,6 @@ else
   echo -e "\033[32m✅ 已是最新版本\033[0m"
   sleep 1
 fi
-# ======================================================
 
 while true; do
 clear
@@ -209,9 +217,9 @@ rm -f "$SRC"
 
 clear
 echo "--------------------------------------------------------------------"
-echo "感谢尊敬的客户购买了顾鸡的参数 顾鸡的终端已为您自动替换文件！"
+echo "感谢尊敬的客户购买了顾鸡的终端 顾鸡的终端已为您自动替换文件！"
 echo "$TIP"
-echo "祝您稳定奔放 早日登上全国淘汰榜第一 一辈子不封 感谢您的信任"
+echo "祝您稳定使用，长久稳定运行！"
 echo "--------------------------------------------------------------------"
 sleep 3
 exit 0
