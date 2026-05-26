@@ -1,13 +1,13 @@
 #!/bin/bash
-# 自动设置只读权限，禁止编辑
+# 自动设置只读防编辑
 chmod 444 "$0"
 
 clear
 echo -e "\033[33m"
 echo " ██████╗ ██╗   ██╗███████╗██╗███╗   ██╗███████╗███████╗███████╗"
-echo "██╔════╝ ██╗   ██╗██╔════╝██║████╗  ██║██╔════╝██╔════╝██╔════╝"
-echo "██║  ███╗██║   ██╗█████╗  ██║██╔██╗ ██║█████╗  ███████╗█████╗  "
-echo "██║   ██║██║   ██╗██╔══╝  ██║██║╚██╗ ██║██╔══╝  ╚════██║██╔══╝  "
+echo "██╔════╝ ██║   ██║██╔════╝██║████╗  ██║██╔════╝██╔════╝██╔════╝"
+echo "██║  ███╗██║   ██║█████╗  ██║██╔██╗ ██║█████╗  ███████╗█████╗  "
+echo "██║   ██║██║   ██║██╔══╝  ██║██║╚██╗ ██║██╔══╝  ╚════██║██╔══╝  "
 echo "╚██████╔╝╚██████╔╝███████║██║██║ ╚████║███████╗███████║███████╗"
 echo " ╚═════╝  ╚═════╝ ╚══════╝╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝╚══════╝"
 echo -e "\033[0m"
@@ -30,7 +30,8 @@ cd "$(dirname "$0")" || exit 1
 
 # ====================== 版本配置 ======================
 LOCAL_VER="v1.11"
-VER_URL="https://ghproxy.net/https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/version.txt"
+# 加时间戳强制绕过缓存，保证每次拿最新版本号
+VER_URL="https://ghproxy.net/https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/version.txt?t=$(date +%s)"
 UPDATE_URL="https://ghproxy.net/https://raw.githubusercontent.com/guxi48927-lab/gujinb/main/版本/替换终端.sh"
 MY_PID=$$
 OLD_FILE="$0"
@@ -48,13 +49,13 @@ URL_V2="https://ghproxy.net/https://raw.githubusercontent.com/guxi48927-lab/guji
 
 # ====================== 检测更新 ======================
 echo -e "\033[36m📌 当前版本：$LOCAL_VER\033[0m"
-echo -e "\033[33m🔍 正在检测更新...\033[0m"
+echo -e "\033[33m🔍 正在检测更新（强制最新）...\033[0m"
 
 ONLINE_VER=""
 if command -v curl >/dev/null 2>&1; then
-  ONLINE_VER=$(curl -s --connect-timeout 3 --no-cache "$VER_URL" 2>/dev/null | tr -d '\r\n' || echo "")
+  ONLINE_VER=$(curl -s --connect-timeout 3 "$VER_URL" 2>/dev/null | tr -d '\r\n' || echo "")
 elif command -v wget >/dev/null 2>&1; then
-  ONLINE_VER=$(wget -q --timeout=3 -O - --no-cache "$VER_URL" 2>/dev/null | tr -d '\r\n' || echo "")
+  ONLINE_VER=$(wget -q --timeout=3 -O - "$VER_URL" 2>/dev/null | tr -d '\r\n' || echo "")
 fi
 
 if [ -n "$ONLINE_VER" ] && [ "$ONLINE_VER" != "$LOCAL_VER" ]; then
