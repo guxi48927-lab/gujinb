@@ -1,0 +1,256 @@
+{
+    "ActionIndex": 6,
+    "ActorSize": 1.100000023841858,
+    "AttackMultiplier": 5.0,
+    "CircleSize": 200.0,
+    "NightVision": true,
+    "ObjectSize": 1.100000023841858,
+    "OutCircleSize": 100.0,
+    "UGC2Angle": true,
+    "actorBag": true,
+    "actorBox": true,
+    "actorHand": true,
+    "actorInfo": true,
+    "actorLine": false,
+    "actorTeammate": false,
+    "actorsBag": true,
+    "advancedMaterial": true,
+    "anticipate": true,
+    "atkRange": 10.60000991821289,
+    "attackHalo": true,
+    "attackRange": true,
+    "blurQualityMode": 0,
+    "czrLightMode": false,
+    "defogging": true,
+    "displayCoffin": true,
+    "doorDist": 10.0,
+    "drawActor": true,
+    "drawObjGuide": false,
+    "drawObject": true,
+    "floatingButtons": [],
+    "fly_goal_high": 1.5,
+    "freezePernew": true,
+    "freezeRender": true,
+    "gamespeed": 1.5600007772445679,
+    "goal_high": 1.5,
+    "handGun": 0,
+    "hookGun": false,
+    "isAimNPC": true,
+    "isHaveCircle": false,
+    "liangdu1": 300.0,
+    "liangdu2": 2.5,
+    "luffy": true,
+    "luffy_anticipate": 0.019999999552965164,
+    "luffy_distance": 5.0,
+    "luffy_high": 0.5,
+    "luffy_scope": 100.0,
+    "model_luffy": true,
+    "objectBox": false,
+    "objg_BlindBox": true,
+    "objg_Entrance": false,
+    "objg_Item": false,
+    "objg_Line": false,
+    "objg_Monster": true,
+    "objg_Vehicle": true,
+    "objg_Waste": true,
+    "objg_bullet": true,
+    "objg_value": 20000,
+    "openDoor": true,
+    "outOfRange_revolver": {
+        "flySpeed": [
+            328.0,
+            328.0,
+            328.0
+        ],
+        "landSpeed": [
+            325.0,
+            325.0,
+            325.0
+        ]
+    },
+    "outOfRange_shotgun": {
+        "flySpeed": [
+            377.0,
+            377.0,
+            377.0
+        ],
+        "landSpeed": [
+            373.0,
+            373.0,
+            373.0
+        ]
+    },
+    "outScreenAim": true,
+    "pernew_value": 130.0,
+    "priorityIndex": 0,
+    "radarEnabled": true,
+    "radarRange": 400.0,
+    "render_dis": 370.0,
+    "segments_revolver": [
+        {
+            "flySpeed": [
+                328.0,
+                328.0,
+                328.0
+            ],
+            "landSpeed": [
+                325.0,
+                325.0,
+                325.0
+            ],
+            "maxDist": 100.0
+        },
+        {
+            "flySpeed": [
+                328.0,
+                328.0,
+                328.0
+            ],
+            "landSpeed": [
+                325.0,
+                325.0,
+                325.0
+            ],
+            "maxDist": 200.0
+        },
+        {
+            "flySpeed": [
+                328.0,
+                328.0,
+                328.0
+            ],
+            "landSpeed": [
+                325.0,
+                325.0,
+                325.0
+            ],
+            "maxDist": 350.0
+        }
+    ],
+    "segments_shotgun": [
+        {
+            "flySpeed": [
+                198.60000610351563,
+                185.60000610351563,
+                201.3000030517578
+            ],
+            "landSpeed": [
+                168.8000030517578,
+                175.60000610351563,
+                165.89999389648438
+            ],
+            "maxDist": 80.0
+        },
+        {
+            "flySpeed": [
+                201.60000610351563,
+                198.60000610351563,
+                212.60000610351563
+            ],
+            "landSpeed": [
+                206.8000030517578,
+                198.60000610351563,
+                221.89999389648438
+            ],
+            "maxDist": 140.0
+        },
+        {
+            "flySpeed": [
+                213.89999389648438,
+                198.60000610351563,
+                223.8000030517578
+            ],
+            "landSpeed": [
+                201.60000610351563,
+                236.89999389648438,
+                212.3000030517578
+            ],
+            "maxDist": 150.0
+        },
+        {
+            "flySpeed": [
+                286.8999938964844,
+                195.8000030517578,
+                269.8999938964844
+            ],
+            "landSpeed": [
+                380.0,
+                380.0,
+                380.0
+            ],
+            "maxDist": 160.0
+        },
+        {
+            "flySpeed": [
+                295.6000061035156,
+                198.60000610351563,
+                301.6000061035156
+            ],
+            "landSpeed": [
+                380.0,
+                380.0,
+                380.0
+            ],
+            "maxDist": 180.0
+        },
+        {
+            "flySpeed": [
+                380.0,
+                380.0,
+                380.0
+            ],
+            "landSpeed": [
+                380.0,
+                380.0,
+                380.0
+            ],
+            "maxDist": 260.0
+        }
+    ],
+    "self_high": 1.75,
+    "shortcutLayout": [
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        }
+    ],
+    "silence": true,
+    "silenceAdjust": true,
+    "switchAtk": false,
+    "switchBow": true,
+    "switchGun": true,
+    "switchJetpack": true,
+    "switchLoad": true,
+    "switchProtection": false,
+    "targetFrameRate": 120,
+    "target_circle": 8.0,
+    "uiLanguage": 0
+}
