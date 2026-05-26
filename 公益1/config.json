@@ -1,0 +1,33 @@
+},
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        }
+    ],
+    "silence": true,
+    "silenceAdjust": false,
+    "switchBow": false,
+    "switchGun": true,
+    "switchJetpack": true,
+    "switchLoad": true,
+    "switchProtection": false,
+    "targetFrameRate": 60,
+    "target_circle": 8.0,
+    "uiLanguage": 0
+}
