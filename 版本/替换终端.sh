@@ -17,7 +17,6 @@ echo ""
 echo -e "\033[35m请输入卡密：\033[0m"
 read -s INPUT_KEY
 
-# 拆分格式卡密：GJMMNB666WSXGWWW
 c1="G"
 c2="J"
 c3="M"
