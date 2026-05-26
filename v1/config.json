@@ -1,0 +1,555 @@
+{
+    "ActionIndex": 0,
+    "ActorSize": 1.0429999828338623,
+    "AttackMultiplier": 5.0,
+    "CircleSize": 500.0,
+    "NightVision": true,
+    "ObjectSize": 1.0429999828338623,
+    "OutCircleSize": 35.0,
+    "UGC2Angle": true,
+    "actorBag": true,
+    "actorBox": true,
+    "actorHand": true,
+    "actorInfo": true,
+    "actorLine": true,
+    "actorTeammate": false,
+    "actorsBag": false,
+    "advancedMaterial": true,
+    "anticipate": true,
+    "atkRange": 8.0,
+    "attackHalo": true,
+    "attackRange": true,
+    "blurQualityMode": 1,
+    "czrLightMode": false,
+    "defogging": true,
+    "displayCoffin": true,
+    "doorDist": 8.0,
+    "drawActor": true,
+    "drawObjGuide": true,
+    "drawObject": true,
+    "floatingButtons": [],
+    "fly_goal_high": 1.5,
+    "freezePernew": true,
+    "freezeRender": true,
+    "gamespeed": 1.309999942779541,
+    "goal_high": 1.5,
+    "handGun": -1,
+    "hookGun": false,
+    "isAimNPC": true,
+    "isHaveCircle": true,
+    "liangdu1": 300.0,
+    "liangdu2": 0.5,
+    "luffy": true,
+    "luffy_anticipate": 0.019999999552965164,
+    "luffy_distance": 4.5,
+    "luffy_high": 0.5,
+    "luffy_scope": 100.0,
+    "model_luffy": false,
+    "objectBox": false,
+    "objg_BlindBox": true,
+    "objg_Entrance": true,
+    "objg_Item": true,
+    "objg_Line": false,
+    "objg_Monster": true,
+    "objg_Vehicle": true,
+    "objg_Waste": true,
+    "objg_bullet": true,
+    "objg_value": 20000,
+    "openDoor": true,
+    "outOfRange_revolver": {
+        "flySpeed": [
+            400.0,
+            400.0,
+            400.0
+        ],
+        "landSpeed": [
+            400.0,
+            400.0,
+            400.0
+        ]
+    },
+    "outOfRange_shotgun": {
+        "flySpeed": [
+            400.0,
+            400.0,
+            400.0
+        ],
+        "landSpeed": [
+            400.0,
+            400.0,
+            400.0
+        ]
+    },
+    "outScreenAim": true,
+    "pernew_value": 78.0,
+    "priorityIndex": 0,
+    "radarEnabled": false,
+    "radarRange": 400.0,
+    "render_dis": 1500.0,
+    "segments_revolver": [
+        {
+            "flySpeed": [
+                180.0,
+                180.0,
+                180.0
+            ],
+            "landSpeed": [
+                150.0,
+                150.0,
+                150.0
+            ],
+            "maxDist": 20.0
+        },
+        {
+            "flySpeed": [
+                200.0,
+                200.0,
+                200.0
+            ],
+            "landSpeed": [
+                170.0,
+                170.0,
+                170.0
+            ],
+            "maxDist": 40.0
+        },
+        {
+            "flySpeed": [
+                220.0,
+                220.0,
+                220.0
+            ],
+            "landSpeed": [
+                190.0,
+                190.0,
+                190.0
+            ],
+            "maxDist": 60.0
+        },
+        {
+            "flySpeed": [
+                240.0,
+                240.0,
+                240.0
+            ],
+            "landSpeed": [
+                210.0,
+                210.0,
+                210.0
+            ],
+            "maxDist": 80.0
+        },
+        {
+            "flySpeed": [
+                260.0,
+                260.0,
+                260.0
+            ],
+            "landSpeed": [
+                230.0,
+                230.0,
+                230.0
+            ],
+            "maxDist": 100.0
+        },
+        {
+            "flySpeed": [
+                280.0,
+                280.0,
+                280.0
+            ],
+            "landSpeed": [
+                255.0,
+                255.0,
+                255.0
+            ],
+            "maxDist": 120.0
+        },
+        {
+            "flySpeed": [
+                300.0,
+                300.0,
+                300.0
+            ],
+            "landSpeed": [
+                280.0,
+                280.0,
+                280.0
+            ],
+            "maxDist": 140.0
+        },
+        {
+            "flySpeed": [
+                320.0,
+                320.0,
+                320.0
+            ],
+            "landSpeed": [
+                310.0,
+                310.0,
+                310.0
+            ],
+            "maxDist": 160.0
+        },
+        {
+            "flySpeed": [
+                340.0,
+                340.0,
+                340.0
+            ],
+            "landSpeed": [
+                340.0,
+                340.0,
+                340.0
+            ],
+            "maxDist": 180.0
+        },
+        {
+            "flySpeed": [
+                400.0,
+                400.0,
+                400.0
+            ],
+            "landSpeed": [
+                400.0,
+                400.0,
+                400.0
+            ],
+            "maxDist": 200.0
+        },
+        {
+            "flySpeed": [
+                400.0,
+                400.0,
+                400.0
+            ],
+            "landSpeed": [
+                400.0,
+                400.0,
+                400.0
+            ],
+            "maxDist": 500.0
+        }
+    ],
+    "segments_shotgun": [
+        {
+            "flySpeed": [
+                180.0,
+                180.0,
+                180.0
+            ],
+            "landSpeed": [
+                170.0,
+                170.0,
+                170.0
+            ],
+            "maxDist": 10.0
+        },
+        {
+            "flySpeed": [
+                195.0,
+                195.0,
+                195.0
+            ],
+            "landSpeed": [
+                185.0,
+                185.0,
+                185.0
+            ],
+            "maxDist": 20.0
+        },
+        {
+            "flySpeed": [
+                220.0,
+                220.0,
+                220.0
+            ],
+            "landSpeed": [
+                210.0,
+                210.0,
+                210.0
+            ],
+            "maxDist": 30.0
+        },
+        {
+            "flySpeed": [
+                230.0,
+                230.0,
+                230.0
+            ],
+            "landSpeed": [
+                220.0,
+                220.0,
+                220.0
+            ],
+            "maxDist": 40.0
+        },
+        {
+            "flySpeed": [
+                240.0,
+                240.0,
+                240.0
+            ],
+            "landSpeed": [
+                230.0,
+                230.0,
+                230.0
+            ],
+            "maxDist": 50.0
+        },
+        {
+            "flySpeed": [
+                250.0,
+                250.0,
+                250.0
+            ],
+            "landSpeed": [
+                240.0,
+                240.0,
+                240.0
+            ],
+            "maxDist": 60.0
+        },
+        {
+            "flySpeed": [
+                260.0,
+                260.0,
+                260.0
+            ],
+            "landSpeed": [
+                250.0,
+                250.0,
+                250.0
+            ],
+            "maxDist": 70.0
+        },
+        {
+            "flySpeed": [
+                270.0,
+                270.0,
+                270.0
+            ],
+            "landSpeed": [
+                260.0,
+                260.0,
+                260.0
+            ],
+            "maxDist": 80.0
+        },
+        {
+            "flySpeed": [
+                294.5,
+                280.0,
+                290.0
+            ],
+            "landSpeed": [
+                280.0,
+                280.0,
+                280.0
+            ],
+            "maxDist": 90.0
+        },
+        {
+            "flySpeed": [
+                305.0,
+                290.0,
+                300.0
+            ],
+            "landSpeed": [
+                290.0,
+                290.0,
+                290.0
+            ],
+            "maxDist": 100.0
+        },
+        {
+            "flySpeed": [
+                331.00006103515625,
+                310.0,
+                310.0
+            ],
+            "landSpeed": [
+                300.0,
+                300.0,
+                300.0
+            ],
+            "maxDist": 110.0
+        },
+        {
+            "flySpeed": [
+                343.0,
+                320.0,
+                320.0
+            ],
+            "landSpeed": [
+                310.0,
+                310.0,
+                310.0
+            ],
+            "maxDist": 120.0
+        },
+        {
+            "flySpeed": [
+                347.0,
+                335.0,
+                345.0
+            ],
+            "landSpeed": [
+                320.0,
+                320.0,
+                320.0
+            ],
+            "maxDist": 130.0
+        },
+        {
+            "flySpeed": [
+                355.5000305175781,
+                340.0,
+                340.0
+            ],
+            "landSpeed": [
+                330.0,
+                330.0,
+                330.0
+            ],
+            "maxDist": 140.0
+        },
+        {
+            "flySpeed": [
+                368.0,
+                358.0,
+                360.0
+            ],
+            "landSpeed": [
+                350.0,
+                350.0,
+                350.0
+            ],
+            "maxDist": 150.0
+        },
+        {
+            "flySpeed": [
+                375.5000305175781,
+                370.0,
+                370.0
+            ],
+            "landSpeed": [
+                360.0,
+                360.0,
+                360.0
+            ],
+            "maxDist": 160.0
+        },
+        {
+            "flySpeed": [
+                380.0,
+                380.0,
+                380.0
+            ],
+            "landSpeed": [
+                370.0,
+                370.0,
+                370.0
+            ],
+            "maxDist": 170.0
+        },
+        {
+            "flySpeed": [
+                400.0,
+                400.0,
+                400.0
+            ],
+            "landSpeed": [
+                390.0,
+                390.0,
+                390.0
+            ],
+            "maxDist": 180.0
+        },
+        {
+            "flySpeed": [
+                400.0,
+                400.0,
+                400.0
+            ],
+            "landSpeed": [
+                400.0,
+                400.0,
+                400.0
+            ],
+            "maxDist": 190.0
+        },
+        {
+            "flySpeed": [
+                400.0,
+                400.0,
+                400.0
+            ],
+            "landSpeed": [
+                400.0,
+                400.0,
+                400.0
+            ],
+            "maxDist": 200.0
+        },
+        {
+            "flySpeed": [
+                400.0,
+                400.0,
+                400.0
+            ],
+            "landSpeed": [
+                400.0,
+                400.0,
+                400.0
+            ],
+            "maxDist": 500.0
+        }
+    ],
+    "self_high": 1.75,
+    "shortcutLayout": [
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        },
+        {
+            "x": 0.0,
+            "y": 0.0
+        }
+    ],
+    "silence": true,
+    "silenceAdjust": false,
+    "switchAtk": true,
+    "switchBow": true,
+    "switchGun": true,
+    "switchJetpack": true,
+    "switchLoad": true,
+    "switchProtection": true,
+    "targetFrameRate": 120,
+    "target_circle": 4.0,
+    "uiLanguage": 0
+}
